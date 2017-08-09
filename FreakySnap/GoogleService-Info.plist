@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>572954242119-og77qu04l7vjk3rb555a0f18ir5g7qei.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.572954242119-og77qu04l7vjk3rb555a0f18ir5g7qei</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAUgwHwKrGLhGYkEjfAM1yOs0WANzbor2Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>572954242119</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>de.graw.FreakySnap</string>
+	<key>PROJECT_ID</key>
+	<string>freakysnap-3425f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>freakysnap-3425f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:572954242119:ios:6a8a63fe801b7a74</string>
+	<key>DATABASE_URL</key>
+	<string>https://freakysnap-3425f.firebaseio.com</string>
+</dict>
+</plist>

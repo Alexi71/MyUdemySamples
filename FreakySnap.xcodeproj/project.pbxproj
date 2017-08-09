@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		23D6505A1F3B2DB70026BFEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D650591F3B2DB70026BFEC /* AppDelegate.swift */; };
-		23D6505C1F3B2DB70026BFEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D6505B1F3B2DB70026BFEC /* ViewController.swift */; };
 		23D6505F1F3B2DB70026BFEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D6505D1F3B2DB70026BFEC /* Main.storyboard */; };
 		23D650611F3B2DB70026BFEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D650601F3B2DB70026BFEC /* Assets.xcassets */; };
 		23D650641F3B2DB70026BFEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D650621F3B2DB70026BFEC /* LaunchScreen.storyboard */; };
+		23D6506D1F3B3A420026BFEC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D6506C1F3B3A420026BFEC /* AuthViewController.swift */; };
+		23D6506E1F3B406A0026BFEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23D6506B1F3B2E350026BFEC /* GoogleService-Info.plist */; };
+		23D650701F3B455B0026BFEC /* SnapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D6506F1F3B455B0026BFEC /* SnapTableViewController.swift */; };
+		23D650721F3B54270026BFEC /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D650711F3B54270026BFEC /* SnapViewController.swift */; };
+		7E3874BEA67AD15AC274458F /* Pods_FreakySnap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C4380C032489DB27986840 /* Pods_FreakySnap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05C4380C032489DB27986840 /* Pods_FreakySnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreakySnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D650561F3B2DB70026BFEC /* FreakySnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreakySnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D650591F3B2DB70026BFEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23D6505B1F3B2DB70026BFEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23D6505E1F3B2DB70026BFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23D650601F3B2DB70026BFEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23D650631F3B2DB70026BFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23D650651F3B2DB70026BFEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D6506B1F3B2E350026BFEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23D6506C1F3B3A420026BFEC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		23D6506F1F3B455B0026BFEC /* SnapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapTableViewController.swift; sourceTree = "<group>"; };
+		23D650711F3B54270026BFEC /* SnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
+		A981CA59844F37185C763588 /* Pods-FreakySnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreakySnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreakySnap/Pods-FreakySnap.debug.xcconfig"; sourceTree = "<group>"; };
+		FA52AD9B7D50C1353809DF74 /* Pods-FreakySnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreakySnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreakySnap/Pods-FreakySnap.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E3874BEA67AD15AC274458F /* Pods_FreakySnap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				23D650581F3B2DB70026BFEC /* FreakySnap */,
 				23D650571F3B2DB70026BFEC /* Products */,
+				B5442A0AB4DD5EEABF09EF14 /* Pods */,
+				D4FB0EBBF078A97C05BA9736 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +67,34 @@
 		23D650581F3B2DB70026BFEC /* FreakySnap */ = {
 			isa = PBXGroup;
 			children = (
+				23D6506B1F3B2E350026BFEC /* GoogleService-Info.plist */,
 				23D650591F3B2DB70026BFEC /* AppDelegate.swift */,
-				23D6505B1F3B2DB70026BFEC /* ViewController.swift */,
 				23D6505D1F3B2DB70026BFEC /* Main.storyboard */,
 				23D650601F3B2DB70026BFEC /* Assets.xcassets */,
 				23D650621F3B2DB70026BFEC /* LaunchScreen.storyboard */,
 				23D650651F3B2DB70026BFEC /* Info.plist */,
+				23D6506C1F3B3A420026BFEC /* AuthViewController.swift */,
+				23D6506F1F3B455B0026BFEC /* SnapTableViewController.swift */,
+				23D650711F3B54270026BFEC /* SnapViewController.swift */,
 			);
 			path = FreakySnap;
+			sourceTree = "<group>";
+		};
+		B5442A0AB4DD5EEABF09EF14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A981CA59844F37185C763588 /* Pods-FreakySnap.debug.xcconfig */,
+				FA52AD9B7D50C1353809DF74 /* Pods-FreakySnap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4FB0EBBF078A97C05BA9736 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05C4380C032489DB27986840 /* Pods_FreakySnap.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23D650681F3B2DB70026BFEC /* Build configuration list for PBXNativeTarget "FreakySnap" */;
 			buildPhases = (
+				3ED564E6B14B19D3A4910BAC /* [CP] Check Pods Manifest.lock */,
 				23D650521F3B2DB70026BFEC /* Sources */,
 				23D650531F3B2DB70026BFEC /* Frameworks */,
 				23D650541F3B2DB70026BFEC /* Resources */,
+				3D5E032A801BA53E858E05D8 /* [CP] Embed Pods Frameworks */,
+				23AAD9A4B8BAD68663499776 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D650641F3B2DB70026BFEC /* LaunchScreen.storyboard in Resources */,
+				23D6506E1F3B406A0026BFEC /* GoogleService-Info.plist in Resources */,
 				23D650611F3B2DB70026BFEC /* Assets.xcassets in Resources */,
 				23D6505F1F3B2DB70026BFEC /* Main.storyboard in Resources */,
 			);
@@ -130,12 +167,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23AAD9A4B8BAD68663499776 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreakySnap/Pods-FreakySnap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D5E032A801BA53E858E05D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreakySnap/Pods-FreakySnap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ED564E6B14B19D3A4910BAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23D650521F3B2DB70026BFEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23D6505C1F3B2DB70026BFEC /* ViewController.swift in Sources */,
+				23D650721F3B54270026BFEC /* SnapViewController.swift in Sources */,
+				23D6506D1F3B3A420026BFEC /* AuthViewController.swift in Sources */,
+				23D650701F3B455B0026BFEC /* SnapTableViewController.swift in Sources */,
 				23D6505A1F3B2DB70026BFEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +358,7 @@
 		};
 		23D650691F3B2DB70026BFEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A981CA59844F37185C763588 /* Pods-FreakySnap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WZL3JGC999;
@@ -285,6 +373,7 @@
 		};
 		23D6506A1F3B2DB70026BFEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA52AD9B7D50C1353809DF74 /* Pods-FreakySnap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WZL3JGC999;
