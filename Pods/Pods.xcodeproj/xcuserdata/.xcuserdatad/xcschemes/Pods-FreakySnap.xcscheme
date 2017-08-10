@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DB0E429482455CAF461B47D999FB56E2'
+               BlueprintIdentifier = '5A9D6B4EB037C485E52EE90F432B9542'
                BlueprintName = 'Pods-FreakySnap'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-FreakySnap.framework'>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2394483C1F3C52F30047EEBB /* UserImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2394483B1F3C52F30047EEBB /* UserImageTableViewController.swift */; };
+		2394483E1F3C7D2E0047EEBB /* SnapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2394483D1F3C7D2E0047EEBB /* SnapItem.swift */; };
+		239448401F3C92520047EEBB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2394483F1F3C92520047EEBB /* DetailViewController.swift */; };
 		23D6505A1F3B2DB70026BFEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D650591F3B2DB70026BFEC /* AppDelegate.swift */; };
 		23D6505F1F3B2DB70026BFEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D6505D1F3B2DB70026BFEC /* Main.storyboard */; };
 		23D650611F3B2DB70026BFEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D650601F3B2DB70026BFEC /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		05C4380C032489DB27986840 /* Pods_FreakySnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreakySnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2394483B1F3C52F30047EEBB /* UserImageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageTableViewController.swift; sourceTree = "<group>"; };
+		2394483D1F3C7D2E0047EEBB /* SnapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapItem.swift; sourceTree = "<group>"; };
+		2394483F1F3C92520047EEBB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		23D650561F3B2DB70026BFEC /* FreakySnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreakySnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D650591F3B2DB70026BFEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23D6505E1F3B2DB70026BFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +82,9 @@
 				23D6506C1F3B3A420026BFEC /* AuthViewController.swift */,
 				23D6506F1F3B455B0026BFEC /* SnapTableViewController.swift */,
 				23D650711F3B54270026BFEC /* SnapViewController.swift */,
+				2394483B1F3C52F30047EEBB /* UserImageTableViewController.swift */,
+				2394483D1F3C7D2E0047EEBB /* SnapItem.swift */,
+				2394483F1F3C92520047EEBB /* DetailViewController.swift */,
 			);
 			path = FreakySnap;
 			sourceTree = "<group>";
@@ -221,9 +230,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D650721F3B54270026BFEC /* SnapViewController.swift in Sources */,
+				2394483C1F3C52F30047EEBB /* UserImageTableViewController.swift in Sources */,
 				23D6506D1F3B3A420026BFEC /* AuthViewController.swift in Sources */,
 				23D650701F3B455B0026BFEC /* SnapTableViewController.swift in Sources */,
+				2394483E1F3C7D2E0047EEBB /* SnapItem.swift in Sources */,
 				23D6505A1F3B2DB70026BFEC /* AppDelegate.swift in Sources */,
+				239448401F3C92520047EEBB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

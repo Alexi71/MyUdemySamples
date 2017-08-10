@@ -7,13 +7,58 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class SnapTableViewController: UITableViewController {
 
-   
+    var snapItems :[SnapItem] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let id = Auth.auth().currentUser?.uid {
+        
+        Database.database().reference().child("users").child(id).child("snaps").observe(.childAdded) { (snapshot) in
+            if let userdictionary = snapshot.value as? NSDictionary {
+                let snapItem : SnapItem = SnapItem()
+                if let from = userdictionary["from"] as? String {
+                    snapItem.from = from
+                    
+                }
+                if let imageUrl = userdictionary["imageUrl"] as? String {
+                    snapItem.imageUrl = imageUrl
+                    
+                }
+                
+                if let imageName = userdictionary["imageName"] as? String {
+                    snapItem.imageName = imageName
+                    
+                }
+                
+                if let message = userdictionary["message"] as? String {
+                    snapItem.message = message
+                    
+                }
+                snapItem.key = snapshot.key
+                self.snapItems.append(snapItem)
+                self.tableView.reloadData()
+            }
+            }
+        
+        
+        Database.database().reference().child("users").child(id).child("snaps").observe(.childRemoved) { (snapshot) in
+            var index = 0
+            for snap in self.snapItems {
+                if snap.key == snapshot.key {
+                    self.snapItems.remove(at: index)
+                }
+                index += 1
+            }
+            self.tableView.reloadData()
+            }
+            
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,14 +73,11 @@ class SnapTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+   
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return snapItems.count
     }
 
     @IBAction func logouTapped(_ sender: UIBarButtonItem) {
@@ -43,15 +85,19 @@ class SnapTableViewController: UITableViewController {
     }
     
     
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mySnaps", for: indexPath)
 
-        // Configure the cell...
-
+        cell.textLabel?.text = snapItems[indexPath.row].from
+        cell.detailTextLabel?.text = snapItems[indexPath.row].message
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = snapItems[indexPath.row]
+        performSegue(withIdentifier: "viewDetails", sender: item)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -88,14 +134,19 @@ class SnapTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? DetailViewController {
+            if let snapItem = sender as? SnapItem {
+                vc.snapItem = snapItem
+            }
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

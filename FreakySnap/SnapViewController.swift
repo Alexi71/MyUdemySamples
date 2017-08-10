@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class SnapViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
@@ -14,6 +15,8 @@ class SnapViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     @IBOutlet weak var descriptionTextField: UITextField!
     
     var imagePicker : UIImagePickerController = UIImagePickerController()
+    var snapItem : SnapItem = SnapItem(url: "", name: "\(NSUUID().uuidString).jpeg", message: "", from: "")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +30,25 @@ class SnapViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     }
     
     @IBAction func nextTapped(_ sender: UIButton) {
-        
+        let imageStorage = Storage.storage().reference().child("images")
+        if let image = imageItem.image {
+            if let imageData = UIImageJPEGRepresentation(image, 0.1) {
+                imageStorage.child(snapItem.imageName).putData(imageData, metadata: nil, completion: { (metadata, error) in
+                    if let error = error {
+                        print (error)
+                    }
+                    else {
+                        print ("Upload complete")
+                        if let imageUrl = metadata?.downloadURL()?.absoluteString {
+                            self.snapItem.imageUrl = imageUrl
+                            self.performSegue(withIdentifier: "UserImageSegue", sender: nil)
+                        }
+                        
+                    }
+                    
+                })
+            }
+        }
     }
     
     @IBAction func openImageTapped(_ sender: UIBarButtonItem) {
@@ -46,14 +67,22 @@ class SnapViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? UserImageTableViewController {
+            vc.snapItem.imageUrl = snapItem.imageUrl
+            vc.snapItem.imageName = snapItem.imageName
+            if let message = descriptionTextField.text {
+                vc.snapItem.message = message
+            }
+            
+        }
     }
-    */
+    
 
 }
